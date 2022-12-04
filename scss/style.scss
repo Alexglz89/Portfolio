@@ -1,0 +1,67 @@
+// !Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+
+// !Переменная
+$color_1: #666;
+
+// !Шаблоны, если необходимо вставить шаблон в стили синтаксис: @extend .shablon;
+// .shablon{
+// 	font-size: 100px;
+// }
+
+// !Миксины        $f -переменная - ставится вместо значения в стилях синтаксим @include font-size: (100px);
+// * преимущество мексинов, можно писать в строку хоть 20 значений.
+@mixin number1($f) {
+	// css параметры
+	font-size: $f;
+}
+
+// glob
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"),
+    url("../fonts/RobotoRegular.woff2") format("woff2"),
+    url("../fonts/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  min-width: 320px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1202px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
